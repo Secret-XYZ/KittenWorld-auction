@@ -1,6 +1,6 @@
-name: ExceAuction
+name: KittenWorldAuction
 version: 1.0.0
-main: ru.exce.auction.AuctionPlugin
+main: ru.kittenworld.auction.AuctionPlugin
 api-version: '1.21'
 depend: [Vault]
 softdepend: [Essentials]
@@ -9,7 +9,7 @@ commands:
     description: Аукцион
     aliases: [auc, auction]
 permissions:
-  exceauction.use:
+  kittenworldauction.use:
     default: true
-  exceauction.admin:
+  kittenworldauction.admin:
     default: op
