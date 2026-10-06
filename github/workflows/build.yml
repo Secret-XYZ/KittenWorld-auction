@@ -1,4 +1,4 @@
-name: Build KittenWorld-seller
+name: Build KittenWorld-auction
 
 on:
   push:
@@ -12,21 +12,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21
           cache: maven
       - name: Build
         run: mvn -B clean package
+      - name: Show built files
+        run: ls -la target
       - uses: actions/upload-artifact@v4
         with:
-          name: seller
-          path: target/KittenWorldSeller.jar
+          name: auction
+          path: target/*.jar
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
           name: Build ${{ github.run_number }}
-          files: target/KittenWorldAuction.jar
+          files: target/*.jar
