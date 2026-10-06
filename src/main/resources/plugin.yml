@@ -1,0 +1,15 @@
+name: ExceAuction
+version: 1.0.0
+main: ru.exce.auction.AuctionPlugin
+api-version: '1.21'
+depend: [Vault]
+softdepend: [Essentials]
+commands:
+  ah:
+    description: Аукцион
+    aliases: [auc, auction]
+permissions:
+  exceauction.use:
+    default: true
+  exceauction.admin:
+    default: op

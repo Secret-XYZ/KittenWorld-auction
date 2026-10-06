@@ -1,0 +1,11 @@
+title: "&8Аукцион"
+currency: "$"
+tax-percent: 5
+expire-hours: 48
+max-listings: 10
+min-price: 1
+max-price: 1000000000000
+blacklist:
+  - BEDROCK
+  - BARRIER
+  - COMMAND_BLOCK
